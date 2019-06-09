@@ -1,14 +1,14 @@
-import React, { ReactNode } from "react"
-import Header from "../shared/header"
-import { ThemeProvider } from "../shared/styled-components/styled-components"
-import theme from "../shared/styled-components/theme"
-import GlobalStyle from "../shared/globalstyle"
+import React, { ReactNode } from "react";
+import Header from "../shared/header";
+import { ThemeProvider } from "../shared/styled-components/styled-components";
+import theme from "../shared/styled-components/theme";
+import GlobalStyle from "../shared/globalstyle";
 
-interface Props {
-  children: ReactNode
+interface IProps {
+  children: ReactNode;
 }
 
-const Layout: React.FC<Props> = ({ children }) => (
+const Layout: React.FC<IProps> = ({ children }) => (
   <ThemeProvider theme={theme}>
     <>
       <GlobalStyle />
@@ -16,6 +16,6 @@ const Layout: React.FC<Props> = ({ children }) => (
       {children}
     </>
   </ThemeProvider>
-)
+);
 
-export default Layout
+export default Layout;

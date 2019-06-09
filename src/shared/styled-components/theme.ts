@@ -1,9 +1,14 @@
+// tslint:disable:typedef
 const colors = {
   navyBlue: "rgb(0, 21, 30)",
   lightForestGreen: "rgb(83,155,92)",
-}
+};
 
-const breakpoints = ["31.25em", "43.75em", "46.875em"]
+const fonts = {
+  text: "Roboto",
+};
+
+const breakpoints = ["31.25em", "43.75em", "46.875em"];
 const fontSizes = [
   "1.2rem",
   "1.4rem",
@@ -15,7 +20,7 @@ const fontSizes = [
   "4.0rem",
   "4.8rem",
   "6.4rem",
-]
+];
 const space = [
   "0",
   ".4rem",
@@ -27,20 +32,22 @@ const space = [
   "4.8rem",
   "6.4rem",
   "9.6rem",
-]
+];
 
-export interface StyleClosetTheme {
-  breakpoints: string[]
-  fontSizes: string[]
-  space: string[]
-  colors: { [key in keyof typeof colors]: string }
+export interface IStyleClosetTheme {
+  breakpoints: string[];
+  fontSizes: string[];
+  space: string[];
+  colors: { [key in keyof typeof colors]: string };
+  fonts: { [key in keyof typeof fonts]: string };
 }
 
-const theme: StyleClosetTheme = {
+const theme: IStyleClosetTheme = {
   breakpoints,
   fontSizes,
   space,
   colors,
-}
+  fonts,
+};
 
-export default theme
+export default theme;
