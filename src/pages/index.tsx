@@ -1,19 +1,18 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
+import React from "react";
+import { graphql } from "gatsby";
+import Layout from "../components/layout";
+import HeroImage from "../shared/hero-image";
 
 export default ({ data }) => {
-  console.log("DATA", data)
-
-  let test: string = "katt"
-
   return (
     <Layout>
+      <HeroImage />
       <h1>{data.allMarkdownRemark.edges[0].node.frontmatter.title}</h1>
     </Layout>
-  )
-}
+  );
+};
 
+// tslint:disable-next-line:typedef
 export const query = graphql`
   query {
     allMarkdownRemark {
@@ -31,4 +30,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
